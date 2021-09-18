@@ -5,15 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <EditText
+
+    <!--<EditText
         android:id="@+id/etEnterAmount"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Enter Amount"
-
+        android:inputType="number|numberDecimal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnAddEuro"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" /> -->
 
     <Button
         android:id="@+id/btnAddEuro"
@@ -42,6 +43,15 @@
         android:layout_marginRight="20dp"
         android:layout_marginTop="20dp"/>
 
+    <Button
+        android:id="@+id/btntest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="test"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/tvEuro"
         android:layout_width="49dp"
@@ -60,7 +70,7 @@
         android:layout_width="96dp"
         android:layout_height="54dp"
         android:layout_marginEnd="80dp"
-        android:text=""
+        android:text="test"
         android:textAlignment="textEnd"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -68,6 +78,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,80 +6,212 @@
     android:layout_height="match_parent">
 
 
-    <!--<EditText
-        android:id="@+id/etEnterAmount"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Enter Amount"
-        android:inputType="number|numberDecimal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnAddEuro"
-        app:layout_constraintStart_toStartOf="parent" /> -->
-
     <Button
         android:id="@+id/btnAddEuro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:background="@drawable/oval"
         android:text="Add €"
-        android:onClick="ajouter"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnDeleteEuro" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.815" />
 
     <Button
         android:id="@+id/btnDeleteEuro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="52dp"
+        android:background="@drawable/oval"
         android:text="Delete €"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.815" />
 
     <Button
         android:id="@+id/btnHistory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
         android:text="History"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"/>
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <Button
-        android:id="@+id/btntest"
+        android:id="@+id/btn_valider_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="480dp"
+        android:layout_marginEnd="8dp"
+        android:text="Valider"
+        android:background="@drawable/valider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_valider_del"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="480dp"
+        android:layout_marginEnd="8dp"
+        android:text="Valider"
+        android:background="@drawable/valider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_retour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
-        android:text="test"
+        android:background="@drawable/retour"
+        android:text="Retour"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvEuro"
-        android:layout_width="49dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="80dp"
-        android:text="€"
-        android:textSize="40sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/tv_resultat"
+        android:layout_width="379dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="208dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="monospace"
+        android:gravity="end"
+        android:text=""
+
+        android:textAlignment="viewEnd"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tableLayout"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintVertical_bias="0.15" />
 
     <TextView
-        android:id="@+id/tvTotalEuro"
-        android:layout_width="96dp"
-        android:layout_height="54dp"
-        android:layout_marginEnd="80dp"
-        android:text="test"
-        android:textAlignment="textEnd"
+        android:id="@+id/tv_saisie"
+        android:layout_width="241dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="208dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="monospace"
+        android:gravity="end"
+        android:text=""
+        android:textAlignment="viewEnd"
         android:textSize="40sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/tableLayout"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintVertical_bias="0.552" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:shrinkColumns="*"
+        android:stretchColumns="*"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn_sept"
+                android:text="7" />
+
+            <Button
+                android:id="@+id/btn_huit"
+                android:text="8" />
+
+            <Button
+                android:id="@+id/btn_neuf"
+                android:text="9" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn_quatre"
+                android:text="4" />
+
+            <Button
+                android:id="@+id/btn_cinq"
+                android:text="5" />
+
+            <Button
+                android:id="@+id/btn_six"
+                android:text="6" />
 
 
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn_un"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/btn_deux"
+                android:text="2" />
+
+            <Button
+                android:id="@+id/btn_trois"
+                android:text="3" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn_Clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C" />
+
+            <Button
+                android:id="@+id/btn_zero"
+                android:text="0" />
+
+
+
+            <Button
+                android:id="@+id/btn_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="setOperator"
+                android:text="." />
+        </TableRow>
+    </TableLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,5 @@
 # app_compte
-Android app to make monney operations.
+Android app to make money operations.
 Can be update with more classes and a structured code.
 
 
